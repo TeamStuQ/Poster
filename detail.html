@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi">
+    <title>我是{{ poster.data.position }}！| {{ poster.data.slogan }}</title>
+  </head>
+  <body>   
+    <div class="result">
+      <div class="section show"><img alt="photo" src="{{ poster.image }}" id="photo" class="photo">
+        <div class="choose"><a id="download">下载</a><a id="new">创建我的专属套路</a><a id="share">分享</a></div>
+        <div class="next"><span>更多套路</span>
+          <div class="next-slide">
+            <svg>
+              <use xlink:href="/dist/poster/icons.svg#up"></use>
+            </svg>
+            <svg>
+              <use xlink:href="/dist/poster/icons.svg#up"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="section more">
+        <div class="to">To You:</div>
+        <ul class="sentences">
+          <li>长按识别图中二维码</li>
+          <li>关注&lt;ArchSummit技术关注&gt;</li>
+          <li>回复“套路”</li>
+          <li>看看其他程序员隐藏的文艺之力！</li>
+        </ul>
+        <div class="from">From 官方套路</div><img alt="qrcode" src="/dist/poster/qr.jpg" class="qr">
+        <div class="next"><span>下方高能</span>
+          <div class="next-slide">
+            <svg>
+              <use xlink:href="/dist/poster/icons.svg#up"></use>
+            </svg>
+            <svg>
+              <use xlink:href="/dist/poster/icons.svg#up"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div class="section more">
+        <div class="to">哇，你发现了这个彩蛋:</div>
+        <ul class="sentences">
+          <li>长按识别图中二维码</li>
+          <li>关注&lt;StuQ订阅号&gt;</li>
+          <li>获得全套“StuQ职业技术角色技能图谱”</li>
+          <li>还有，你一定会想要的“StuQ课程优惠码”</li>
+        </ul>
+        <div class="from">From stuq.org（读音：斯达Q）</div><img alt="qrcode" src="/dist/poster/qr-stuq.jpg" class="qr">
+      </div>
+    </div>
+    <div class="download-info">
+      <div class="close"></div>
+      <svg>
+        <use xlink:href="/dist/poster/icons.svg#download"></use>
+      </svg>
+      <div class="info">长按保存图片</div>
+      <div class="info">让大家感受你的文艺之力吧</div>
+    </div>
+    <div class="share-info">
+      <div class="close"></div>
+      <svg>
+        <use xlink:href="/dist/poster/icons.svg#share"></use>
+      </svg>
+      <div class="info">点击右上角分享</div>
+      <div class="info">发现程序员朋友的另一面</div>
+    </div>
+    <div class="bg">
+      <svg>
+        <use xlink:href="/dist/poster/icons.svg#as-mountain"></use>
+      </svg>
+    </div>
+    <script src="/dist/poster.min.js"></script>
+  </body>
+</html>

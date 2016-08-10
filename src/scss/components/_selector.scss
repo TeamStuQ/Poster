@@ -1,0 +1,241 @@
+// _selector.scss
+
+@import '../../node_modules/swiper/dist/css/swiper.css';
+
+$prevWidth: 69vw;
+$prevHeight: 1.6 * $prevWidth;
+
+.selector {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding-top: 5.5vh;
+  
+  .hide {
+    display: none !important;
+  }
+  
+  .bg {
+    background-color: $lgray;
+  }
+  
+  .title {
+    display: block;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    font-size: 0.875rem;
+    color: $dgray;
+    margin-bottom: 3.75vh;
+    
+    .pos-show,
+    .pos-edit {
+      display: inline-block;
+      position: relative;
+      font: {
+        size: 1.375rem;
+        weight: 400;
+      }
+      color: $black;
+      line-height: 1em;
+      margin-left: 0.25em;
+    }
+    
+    .pos-edit {
+      padding: 0;
+      border: none;
+    }
+    
+    .pos-status {
+      display: inline-block;
+      position: absolute;
+      top: 0.625rem;
+      right: 6vw;
+      height: 1em;
+      font-size: 0.75rem;
+      line-height: 1em;
+      
+      &.edit {
+        svg {
+          width: 0.75rem;
+          height: 0.75rem;
+          margin-right: 0.25em;
+        }
+      }
+    }
+  }
+  
+  .demos {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    padding-top: 5px;
+    
+    .swiper-wrapper {
+      position: relative;
+      width: 100%;
+      
+      .swiper-slide {
+        display: block;
+        position: relative;
+        width: $prevWidth;
+        height: $prevHeight;        
+        padding: 4.666666667vw 3vw;
+        box-shadow: 2px 2px 10px $dgray;
+                        
+        &:nth-child(4n+1) {
+          background-color: $sblue;
+        }
+        
+        &:nth-child(4n+2) {
+          background-color: $sgreen;
+        }
+        
+        &:nth-child(4n+3) {
+          background-color: $spink;
+        }
+        
+        &:nth-child(4n) {
+          background-color: $syellow;
+        }      
+        
+        .title-1 {
+          display: block;
+          position: relative;
+          width: 42.666666667vw;
+          margin-bottom: 1.6vw;
+        }
+        
+        .title-2 {
+          display: block;
+          position: relative;
+          width: 21.333333333vw;
+          margin-bottom: 4vw;
+        }
+        
+        > ul {
+          display: block;
+          position: relative;
+          width: 100%;
+          margin: 0;
+          margin-bottom: 10vw;
+          padding: 0;
+          list-style: none;
+          
+          li {
+            display: block;
+            position: relative;
+            width: 100%;
+            font: {
+              size: 2.133333333vw;
+              weight: 300;
+            }
+            margin-bottom: 2.4vw;
+            line-height: 1em;
+            
+            img {
+              display: inline-block;
+              position: relative;
+              width: 1.333333333vw;
+              margin-right: 0.25em;
+            }
+          }
+        }
+        
+        .character {
+          display: block;
+          position: relative;
+          width: 100%;
+        }
+        
+        .character-diy {
+          display: block;
+          position: absolute;
+          left: 0;
+          width: 100%;
+          height: 33vh;
+          opacity: 0.15;
+          z-index: 5;
+        }
+        
+        .diy-photo {
+          width: 0.1px;
+        	height: 0.1px;
+        	opacity: 0;
+        	overflow: hidden;
+        	position: absolute;
+        	z-index: -1;
+        }
+        
+        .diy-photo + label {
+          display: block;
+          position: absolute;
+          width: 18vw;
+          height: 18vw;
+          left: 25.5vw;
+          margin-top: ($prevHeight - 18vw - 4.666666667vw*2)/4;
+          border: 1px dashed $dgray;
+          border-radius: 50%;
+          cursor: pointer;
+          padding: 5vw;
+          z-index: 10;
+          
+          i:first-child {
+            display: block;
+            position: absolute;
+            top: 9vw;
+            width: 8vw;
+            height: 1px;
+            background-color: $dgray;
+          }
+          
+          i:last-child {
+            display: block;
+            position: absolute;
+            left: 9vw;
+            width: 1px;
+            height: 8vw;
+            background-color: $dgray;
+          }
+        }
+      }
+    }        
+  }
+  
+  .next-edit {
+    display: block;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    
+    span {
+      display: block;
+      position: relative;
+      width: 100%;
+      text-align: center;
+      font-size: 3.2vw;
+      line-height: 1em;
+      margin-bottom: 4vw;
+      color: $dgray;
+    }
+    
+    .next-slide {
+      display: block;
+      position: relative;
+      width: 4.67vw;
+      height: 4.67vw;
+      margin: 0 auto 3vh;
+      animation: slideUp 1s infinite;
+      
+      svg {
+        display: block;
+        fill: $dgray;
+        width: 4.67vw;
+        height: 2.67vw;
+        margin-bottom: -0.5vh;
+      }
+    }
+  }
+}

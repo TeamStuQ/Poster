@@ -1,0 +1,41 @@
+// base.scss
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: block;
+  position: relative;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Lantinghei SC", "Hiragino Sans GB", STHeiti, "Microsoft Yahei", "Microsoft Sans Serif", sans-serif;
+  font-size: 16px;
+  overflow: hidden;
+}
+
+.poster {
+  display: block;
+  position: relative;
+  width: 100%;
+}
+
+.bg {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  z-index: -1;
+  opacity: 0.1;
+  overflow: hidden;
+    
+  svg {      
+    position: absolute;
+    bottom: 0;
+    left: -50%;
+    width: 300vw;
+    height: 124vw;
+  }        
+}

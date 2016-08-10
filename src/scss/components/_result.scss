@@ -1,0 +1,269 @@
+// _result.scss
+
+.result {
+  display: block;
+  position: relative;
+  width: 100%;
+  
+  .show {
+    display: block;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    padding: {
+      top: 5vh;
+    }
+    
+    .photo {
+      display: block;
+      position: relative;
+      height: 72.5vh;
+      margin: 0 auto 4.25vh;
+      box-shadow: 2px 2px 10px $dgray;
+    }
+    
+    .choose {
+      display: block;
+      position: relative;
+      width: 80vw;
+      margin: 0 auto;
+      text-align: center;
+      
+      > a {
+        display: inline-block;
+        position: relative;
+        border: 1px solid $border-gray {
+          radius: 10px;
+        }
+        text-align: center;
+        height: 8vw;
+        width: 16vw;
+        line-height: 8vw;
+        color: $dgray;
+        background-color: $white;
+        font: {
+          size: 3.6vw;
+          weight: 400;
+        }
+        cursor: pointer;
+        text-decoration: none;
+        
+        &#new {
+          width: 39.2vw;
+          background-color: $blue;
+          color: $white;
+          margin: 0 4.4vw;
+        }
+      }
+    }
+    
+    .next {
+      display: block;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      
+      span {
+        display: block;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        font-size: 3.2vw;
+        line-height: 1em;
+        margin-bottom: 2vw;
+        color: $dgray;
+      }
+      
+      .next-slide {
+        display: block;
+        position: relative;
+        width: 4.67vw;
+        height: 4.67vw;
+        margin: 0 auto 2vh;
+        animation: slideUp 1s infinite;
+        
+        svg {
+          display: block;
+          fill: $dgray;
+          width: 4.67vw;
+          height: 2.67vw;
+          margin-bottom: -0.5vh;
+        }
+      }
+    }
+  }
+  
+  .more {
+    display: block;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    padding: 7vh 6.4vw;
+    
+    .next {
+      display: block;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      
+      span {
+        display: block;
+        position: relative;
+        width: 100%;
+        text-align: center;
+        font-size: 3.2vw;
+        line-height: 1em;
+        margin-bottom: 2vw;
+        color: $dgray;
+      }
+      
+      .next-slide {
+        display: block;
+        position: relative;
+        width: 4.67vw;
+        height: 4.67vw;
+        margin: 0 auto 2vh;
+        animation: slideUp 1s infinite;
+        
+        svg {
+          display: block;
+          fill: $dgray;
+          width: 4.67vw;
+          height: 2.67vw;
+          margin-bottom: -0.5vh;
+        }
+      }
+    }
+    
+    .to {
+      display: block;
+      position: relative;
+      width: 100%;
+      line-height: 1em;
+      font: {
+        size: 4.4vw;
+        weight: 400;
+      }
+      color: $dgray;
+      margin-bottom: 5vh;
+    }
+    
+    .sentences {
+      display: block;
+      position: relative;
+      width: 100%;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      
+      li {
+        display: block;
+        position: relative;
+        width: 100%;
+        line-height: 1em;
+        font: {
+          size: 4.4vw;
+          weight: 400;
+        }
+        color: $black;
+        margin-bottom: 2.5vh;
+        text-align: center;
+        
+        &:last-child {
+          margin-bottom: 5.5vh;
+        }
+      }
+    }
+    
+    .from {
+      display: block;
+      position: relative;
+      width: 100%;
+      line-height: 1em;
+      font: {
+        size: 4.4vw;
+        weight: 400;
+      }
+      color: $dgray;
+      margin-bottom: 11.5vh;
+      text-align: right;
+    }
+    
+    .qr {
+      display: block;
+      position: relative;
+      width: 52.4vw;
+      margin: 0 auto;
+    }
+  }
+}
+
+.download-info,
+.share-info {
+  display: none;
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  padding-top: 42.5vh;
+  z-index: 10;
+  
+  .close {
+    display: block;
+    position: absolute;
+    width: 5.6vw;
+    height: 5.6vw;
+    top: 13.5vh;
+    right: 4vw;
+    cursor: pointer;
+    transform: rotate(45deg);
+    
+    &:before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 2.8vw;
+      width: 5.6vw;
+      height: 2px;
+      background-color: $white;
+    }
+    
+    &:after {
+      content: '';
+      display: block;
+      position: absolute;
+      left: 2.8vw;
+      width: 2px;
+      height: 5.6vw;
+      background-color: $white;
+    }
+  }
+  
+  svg {
+    display: block;
+    position: relative;
+    fill: $white;
+    width: 10.4vw;
+    height: 10.4vw;
+    margin: 0 auto 3vh;
+  }
+  
+  .info {
+    display: block;
+    position: relative;
+    width: 100%;
+    text-align: center;
+    color: $white;
+    font: {
+      size: 3.6vw;
+      weight: 400;
+    }
+  }
+  
+  &.active {
+    display: block;
+  }
+}

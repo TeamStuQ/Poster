@@ -1,0 +1,81 @@
+// _loading.scss
+
+.loading {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding-top: 20vh;    
+  
+  ul {
+    display: block;
+    position: relative;
+    width: 100%;
+    margin: 0;    
+    padding: 0;
+    list-style: none;
+    
+    li {
+      display: block;
+      position: relative;
+      width: 100%;
+      text-align: center;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1em;
+      margin-bottom: 0.75rem;
+      color: $dgray;
+    }
+  }
+  
+  .loader {
+    display: flex;
+    position: relative;
+    margin: -2rem auto 0;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 75px;
+    height: 100px;
+    transform: scale(0.5);
+    
+    &__bar {
+      position: absolute;
+      bottom: 0;
+      width: 10px;
+      height: 50%;
+      background: $bar-color;
+      transform-origin: center bottom;
+      box-shadow: 1px 1px 0 rgba(0,0,0,.2);
+      
+      @for $i from 1 through 5 { 
+         &:nth-child(#{$i}) {
+           left: ($i - 1) * 15px;
+           transform: scale(1,$i*.2);
+           animation: barUp#{$i} 4s infinite;
+          }
+      }
+      
+    }
+    
+    &__ball {
+      position: absolute;
+      bottom: 10px;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      background: $ball-color;
+      border-radius: 50%;
+      animation: ball 4s infinite;
+    }
+  }
+  
+  .as-logo {
+    display: block;
+    position: absolute;
+    width: 30vw;
+    height: 9.3vw;
+    bottom: 12vh;
+    left: 35vw;
+  }
+}

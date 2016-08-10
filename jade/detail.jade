@@ -1,0 +1,62 @@
+doctype html
+html
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=device-dpi')
+    title 我是{{ poster.data.position }}！| {{ poster.data.slogan }}
+  body    
+    div.result
+      div.section.show
+        img.photo(alt='photo' src='{{ poster.image }}' id='photo')
+        div.choose
+          a#download 下载
+          a#new 创建我的专属套路
+          a#share 分享
+        div.next
+          span 更多套路
+          div.next-slide
+            svg
+              use(xlink:href='/dist/poster/icons.svg#up')
+            svg
+              use(xlink:href='/dist/poster/icons.svg#up')
+      div.section.more
+        div.to To You:
+        ul.sentences
+          li 长按识别图中二维码
+          li 关注&lt;ArchSummit技术关注&gt;
+          li 回复“套路”
+          li 看看其他程序员隐藏的文艺之力！
+        div.from From 官方套路
+        img.qr(alt='qrcode' src='/dist/poster/qr.jpg')
+        div.next
+          span 下方高能
+          div.next-slide
+            svg
+              use(xlink:href='/dist/poster/icons.svg#up')
+            svg
+              use(xlink:href='/dist/poster/icons.svg#up')
+      div.section.more
+        div.to 哇，你发现了这个彩蛋:
+        ul.sentences
+          li 长按识别图中二维码
+          li 关注&lt;StuQ订阅号&gt;
+          li 获得全套“StuQ职业技术角色技能图谱”
+          li 还有，你一定会想要的“StuQ课程优惠码”
+        div.from From stuq.org（读音：斯达Q）
+        img.qr(alt='qrcode' src='/dist/poster/qr-stuq.jpg')
+    div.download-info
+      div.close
+      svg
+        use(xlink:href='/dist/poster/icons.svg#download')
+      div.info 长按保存图片
+      div.info 让大家感受你的文艺之力吧
+    div.share-info
+      div.close
+      svg
+        use(xlink:href='/dist/poster/icons.svg#share')
+      div.info 点击右上角分享
+      div.info 发现程序员朋友的另一面
+    div.bg
+      svg
+        use(xlink:href='/dist/poster/icons.svg#as-mountain')
+    script(src='/dist/poster.min.js')
