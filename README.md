@@ -19,7 +19,7 @@ cd Poster
 2.安装相关的依赖包（请确保你已经安装了[node.js](https://nodej.org/)）：
 
 ```sh
-npm intall
+npm install
 ```
 
 3.如果需要，在全局环境下安装 [webpack](https://github.com/webpak/webpack)：
